@@ -1,0 +1,48 @@
+<div class="contact-window" id="contact">
+  <h1>Let's Get in Touch.</h1>
+  <p>Discuss a project or just want to say Hi? My inbox is open for all.</p>
+
+  <div class="contact-container">
+    <form
+      #contactForm="ngForm"
+      (ngSubmit)="sendEmail()"
+      class="contact-wrapper-right"
+    >
+      <input
+        id="name"
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        required
+        [(ngModel)]="formData.name"
+      />
+
+      <input
+        id="email"
+        type="email"
+        name="email"
+        placeholder="Email ID"
+        required
+        [(ngModel)]="formData.email"
+      />
+
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Share your thoughts and insights here; your feedback means a lot."
+        required
+        [(ngModel)]="formData.message"
+      ></textarea>
+
+      <button
+        class="btn"
+        id="submitBtn"
+        type="submit"
+        [disabled]="!contactForm.valid || loading"
+      >
+        {{ loading ? 'Sending...' : 'Send Message' }}
+      </button>
+    </form>
+  </div>
+</div>
