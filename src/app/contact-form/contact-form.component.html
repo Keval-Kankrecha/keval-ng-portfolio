@@ -39,8 +39,8 @@
         class="btn"
         id="submitBtn"
         type="submit"
-        [disabled]="!contactForm.valid || loading"
-      >
+        >
+        <!-- [disabled]="!contactForm.valid || loading" -->
         {{ loading ? 'Sending...' : 'Send Message' }}
       </button>
     </form>

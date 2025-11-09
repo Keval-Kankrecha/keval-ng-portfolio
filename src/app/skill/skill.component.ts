@@ -30,7 +30,7 @@ export class SkillComponent {
       ],
     },
     {
-      category: 'Tools & Cloud',
+      category: 'Tools & Systems',
       items: [
         { title: 'Docker', icon: 'simpleDocker' },
         { title: 'Clickup', icon: 'simpleClickup' },

@@ -5,10 +5,14 @@
     <h2 style="text-align: center">{{ section.category }}</h2>
 
     <div class="skillset">
-      <abbr *ngFor="let skill of section.items" [title]="skill.title">
-       <ng-icon [name]="skill.icon" class="techLogo" />
-        <h3 style="text-align: center">{{ skill.title }}</h3>
-      </abbr>
+      <ng-container *ngFor="let skill of section.items">
+        <div class="tech-logo-wrapper" [title]="skill.title">
+          <abbr [title]="skill.title">
+          <ng-icon [name]="skill.icon" class="techLogo" />
+          <!-- <h3 style="text-align: center">{{ skill.title }}</h3> -->
+        </abbr>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>
