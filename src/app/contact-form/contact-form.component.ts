@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
-  standalone: false
+  standalone: false,
 })
 export class ContactFormComponent {
   formData = {
@@ -20,8 +20,6 @@ export class ContactFormComponent {
   constructor(private toastr: ToastrService) {}
 
   sendEmail() {
-    this.toastr.success('Message sent successfully!');
-    return;
     if (!this.formData.name || !this.formData.email || !this.formData.message) {
       this.toastr.error('Please fill all fields');
       return;
@@ -39,6 +37,7 @@ export class ContactFormComponent {
         this.toastr.success('Message sent successfully!');
         this.formData = { name: '', email: '', message: '' };
         this.loading = false;
+        this.toastr.success('Message sent successfully!');
       })
       .catch((error) => {
         console.error('Email send error:', error);
