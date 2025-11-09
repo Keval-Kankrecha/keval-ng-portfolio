@@ -28,6 +28,8 @@ import {
   simpleGithub,
 } from '@ng-icons/simple-icons';
 
+import {ionMenuOutline, ionClose} from '@ng-icons/ionicons'
+
 import {diNodejsPlainWordmark} from '@ng-icons/devicon/plain'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -78,7 +80,8 @@ import { ToastrModule } from 'ngx-toastr';
       simpleClickup,
       simpleGit,
       diNodejsPlainWordmark,
-      
+      ionMenuOutline,
+      ionClose
     }),
   ],
   providers: [provideClientHydration(withEventReplay())],

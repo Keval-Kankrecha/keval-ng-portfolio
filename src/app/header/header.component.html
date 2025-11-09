@@ -8,11 +8,7 @@
     </a>
   </div>
 
-  <ul
-    [class.nav-menu]="true"
-    [class.active]="click"
-    (click)="handleClick()"
-  >
+  <ul [class.nav-menu]="true" [class.active]="click" (click)="handleClick()">
     <li>
       <a href="#about" class="navLink" (click)="scrollTo('about')">About</a>
     </li>
@@ -20,7 +16,9 @@
       <a href="#skill" class="navLink" (click)="scrollTo('skill')">Skills</a>
     </li>
     <li>
-      <a href="#contact" class="navLink" (click)="scrollTo('contact')">Contact</a>
+      <a href="#contact" class="navLink" (click)="scrollTo('contact')"
+        >Contact</a
+      >
     </li>
   </ul>
 
@@ -30,34 +28,26 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      <ng-icon name="bootstrapLinkedin" class="social"/>
+      <ng-icon name="bootstrapLinkedin" class="social" />
     </a>
     <a
       href="https://github.com/Keval-Kankrecha"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <ng-icon name="simpleGithub" class="social"/>
+      <ng-icon name="simpleGithub" class="social" />
     </a>
     <a
       href="https://www.instagram.com/kevalkankrecha_2/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <ng-icon name="simpleInstagram" class="social"/>
+      <ng-icon name="simpleInstagram" class="social" />
     </a>
   </div>
 
   <div class="hamburger" (click)="handleClick()">
-    <i
-      *ngIf="click"
-      class="fas fa-times bars"
-      style="font-size: 25px"
-    ></i>
-    <i
-      *ngIf="!click"
-      class="fas fa-bars bars"
-      style="font-size: 25px; color: #fff"
-    ></i>
+    <ng-icon *ngIf="!click" name="ionMenuOutline" />
+    <ng-icon *ngIf="click" name="ionClose" />
   </div>
 </nav>
