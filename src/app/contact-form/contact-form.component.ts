@@ -34,7 +34,7 @@ export class ContactFormComponent {
     emailjs
       .send(serviceID, templateID, this.formData, publicKey)
       .then(() => {
-        this.toastr.success('Message sent successfully!');
+        this.toastr.success('Message sent successfully!','Success');
         this.formData = { name: '', email: '', message: '' };
         this.loading = false;
         this.toastr.success('Message sent successfully!');

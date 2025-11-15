@@ -59,7 +59,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 3000,
-      positionClass: 'toast-bottom-left',
+      positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),
     NgIconsModule.withIcons({
