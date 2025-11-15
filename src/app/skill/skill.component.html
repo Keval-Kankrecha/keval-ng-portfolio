@@ -6,11 +6,16 @@
 
     <div class="skillset">
       <ng-container *ngFor="let skill of section.items">
-        <div class="tech-logo-wrapper" [title]="skill.title">
-          <abbr [title]="skill.title">
-          <ng-icon [name]="skill.icon" class="techLogo" />
-          <!-- <h3 style="text-align: center">{{ skill.title }}</h3> -->
-        </abbr>
+        <div style="display: flex; flex-direction: column">
+          <div class="tech-logo-wrapper" [title]="skill.title">
+            <abbr [title]="skill.title">
+              <ng-icon [name]="skill.icon" class="techLogo" />
+              <!-- <h3 style="text-align: center">{{ skill.title }}</h3> -->
+            </abbr>
+          </div>
+          <p style="text-align: center; padding-top: 5px">
+            {{ skill.displayValue }}
+          </p>
         </div>
       </ng-container>
     </div>
